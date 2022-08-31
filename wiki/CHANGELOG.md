@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/paulAlexandruSerban/prj--fe-ui-techstack-insights/compare/v1.0.0...v1.0.1) (2022-08-31)
+
+
+### Bug Fixes
+
+* **css references:** adjust css references ([c3c439d](https://github.com/paulAlexandruSerban/prj--fe-ui-techstack-insights/commit/c3c439d9ec3be23355f71bd99db6d9a988ea9149))
+
 # 1.0.0 (2022-08-31)
 
 
