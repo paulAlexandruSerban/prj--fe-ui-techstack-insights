@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/paulAlexandruSerban/prj--fe-ui-techstack-insights/compare/v1.0.1...v1.0.2) (2022-08-31)
+
+
+### Bug Fixes
+
+* **image:** adjust image refefences ([509776d](https://github.com/paulAlexandruSerban/prj--fe-ui-techstack-insights/commit/509776d1befaaf4ac326373a787a3f6652050b6a))
+
 ## [1.0.1](https://github.com/paulAlexandruSerban/prj--fe-ui-techstack-insights/compare/v1.0.0...v1.0.1) (2022-08-31)
 
 
