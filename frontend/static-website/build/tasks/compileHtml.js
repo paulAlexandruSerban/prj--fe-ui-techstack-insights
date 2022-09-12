@@ -26,6 +26,7 @@ export const compileHtml = () => {
       .pipe(
         embedSvg({
           selectors: ".inline-svg",
+          attrs: /^(?!src|alt).*$/gm,
           root: `${paths.src.assets.svgFiles}`,
           xmlMode: true,
         })
