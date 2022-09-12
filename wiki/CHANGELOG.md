@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/paulAlexandruSerban/prj--fe-ui-techstack-insights/compare/v1.0.2...v1.0.3) (2022-09-12)
+
+
+### Bug Fixes
+
+* **html:** adjusted markup according to html validator ([d0af74a](https://github.com/paulAlexandruSerban/prj--fe-ui-techstack-insights/commit/d0af74abed9b64832fdccf2008e8038c323133c7))
+
 ## [1.0.2](https://github.com/paulAlexandruSerban/prj--fe-ui-techstack-insights/compare/v1.0.1...v1.0.2) (2022-08-31)
 
 
