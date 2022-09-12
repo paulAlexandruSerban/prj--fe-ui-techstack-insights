@@ -5,27 +5,30 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <!-- 
-      - define how pages should be handled by caches 
+    <!--
+      - define how pages should be handled by caches
       - may be cached in public shared caches
-      - http-equiv="Cache-control - is specifically used by Internet Explorer
+      - http-equiv="cache-control" - is specifically used by Internet Explorer
+
+      ERROR: <meta http-equiv="cache-control" content="public" /> is no longer a valid pragma directive
+        FIX: the alternative is defining cache-control as an HTTP header
     -->
-    <meta http-equiv="Cache-control" content="public">
-    <!-- 
-      meta element to specify some "description" of the page - in some situations 
+
+    <!--
+      meta element to specify some "description" of the page - in some situations
       this description is used in the snippet shown in search results
-     -->
+    -->
     <meta name="description" content="HTML Green demo landing page elements" />
 
     <!-- meta element to specify some "keywords" that users might use to look for the page -->
     <meta name="keywords" content="HTML Green demo landing page elements" />
 
-    <!-- 
-      meta element to tell the browser how to render a page on a mobile device - presence 
+    <!--
+      meta element to tell the browser how to render a page on a mobile device - presence
       of this tag indicates to Google that the page is mobile friendly
         - width=device-width - instructs the page to match the screen's width in device-independent pixels
-        - initial-scale=1 - instructs browsers to establish a 1:1 relationship between CSS pixels 
-        and device-independent pixels regardless of device orientation, and allows the page to 
+        - initial-scale=1 - instructs browsers to establish a 1:1 relationship between CSS pixels
+        and device-independent pixels regardless of device orientation, and allows the page to
         take advantage of the full landscape width
         - shrink to fit -  is only for safari when split or side-view mode so that elements are not shrinked
     -->
@@ -33,7 +36,7 @@
 
     <!--
       OpenGraph metadata
-      - enables any web page to become a rich object in a social graph - this is used on Facebook to allow any web 
+      - enables any web page to become a rich object in a social graph - this is used on Facebook to allow any web
       page to have the same functionality as any other object on Facebook
       - og:title - title of your object as it should appear within the graph
       - og:type - the type of your object
@@ -57,7 +60,7 @@
     <link rel="shortcut icon" href="/assets/icons/favicon-32x32.png" type="image/x-icon" />
     <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-touch-icon.png" />
     <link rel="mask-icon" href="/assets/svgs/safari-pinned-tab.svg" color="#5bbad5" />
-    
+
     <!-- Critical Stylesheets - START -->
     <link rel="stylesheet" href="../css/page/base.page.layer.css" />
     <link rel="stylesheet" href="../css/template/landing.template.layer.css" />
@@ -172,32 +175,28 @@
               <span class="cmp-heading__main">Responsive images</span>
             </h2>
           </header>
-          <div class="mod-article__body col-smartphone-12">
-            <section class="mod-section__base row">
-              <div class="cmp-image__base col-smartphone-12">
-                <div class="cmp-image__container">
-                  <img
-                    class="cmp-image__image"
-                    loading="lazy"
-                    srcset="
-                      ../assets/images/wallpaper-320px.webp   320w,
-                      ../assets/images/wallpaper-480px.webp   480w,
-                      ../assets/images/wallpaper-960px.webp   960w,
-                      ../assets/images/wallpaper-1440px.webp 1440w,
-                      ../assets/images/wallpaper-1920px.webp 1920w
-                    "
-                    sizes="(max-width: 319px) 320px,
-                                    (max-width: 479px) 480px,
-                                    (max-width: 959px) 960px,
-                                    (max-width: 1439px) 1440px,
-                                    1920px"
-                    src="/assets/images/wallpaper-original.webp"
-                    alt="Image of Jerry The Professor Thomas preparing the Blue Blazer Cocktail using the throw preparation technique"
-                    id="image"
-                  />
-                </div>
-              </div>
-            </section>
+          <div class="cmp-image__base col-smartphone-12">
+            <div class="cmp-image__container">
+              <img
+                class="cmp-image__image"
+                loading="lazy"
+                srcset="
+                  ../assets/images/wallpaper-320px.webp   320w,
+                  ../assets/images/wallpaper-480px.webp   480w,
+                  ../assets/images/wallpaper-960px.webp   960w,
+                  ../assets/images/wallpaper-1440px.webp 1440w,
+                  ../assets/images/wallpaper-1920px.webp 1920w
+                "
+                sizes="(max-width: 319px) 320px,
+                                (max-width: 479px) 480px,
+                                (max-width: 959px) 960px,
+                                (max-width: 1439px) 1440px,
+                                1920px"
+                src="../assets/images/wallpaper-original.webp"
+                alt="Image of Jerry The Professor Thomas preparing the Blue Blazer Cocktail using the throw preparation technique"
+                id="image"
+              />
+            </div>
           </div>
         </div>
       </article>
@@ -209,30 +208,26 @@
               <span class="cmp-heading__main">SVGs</span>
             </h2>
           </header>
-          <div class="mod-article__body col-smartphone-12">
-            <section class="mod-section__base row">
-              <ul class="cmp-list-unordered__base cmp-list-unordered__base--row col-smartphone-12">
-                <li class="cmp-list-unordered__item">
-                  <svg src="logo-freecodecamp-icon-vector-01.svg" class="inline-svg cmp-link-icon__icon"></svg>
-                </li>
-                <li class="cmp-list-unordered__item">
-                  <svg src="logo-linkedin.svg" class="inline-svg cmp-link-icon__icon"></svg>
-                </li>
-                <li class="cmp-list-unordered__item">
-                  <svg src="logo-blogger.svg" class="inline-svg cmp-link-icon__icon"></svg>
-                </li>
-                <li class="cmp-list-unordered__item">
-                  <svg src="logo-github.svg" class="inline-svg cmp-link-icon__icon"></svg>
-                </li>
-                <li class="cmp-list-unordered__item">
-                  <svg src="logo-hackerank.svg" class="inline-svg cmp-link-icon__icon"></svg>
-                </li>
-                <li class="cmp-list-unordered__item">
-                  <svg src="logo-codepen.svg" class="inline-svg cmp-link-icon__icon"></svg>
-                </li>
-              </ul>
-            </section>
-          </div>
+          <ul class="cmp-list-unordered__base cmp-list-unordered__base--row col-smartphone-12">
+            <li class="cmp-list-unordered__item">
+              <img src="logo-freecodecamp-icon-vector-01.svg" class="inline-svg cmp-link-icon__icon" alt="icon" />
+            </li>
+            <li class="cmp-list-unordered__item">
+              <img src="logo-linkedin.svg" class="inline-svg cmp-link-icon__icon" alt="icon" />
+            </li>
+            <li class="cmp-list-unordered__item">
+              <img src="logo-blogger.svg" class="inline-svg cmp-link-icon__icon" alt="icon" />
+            </li>
+            <li class="cmp-list-unordered__item">
+              <img src="logo-github.svg" class="inline-svg cmp-link-icon__icon" alt="icon" />
+            </li>
+            <li class="cmp-list-unordered__item">
+              <img src="logo-hackerank.svg" class="inline-svg cmp-link-icon__icon" alt="icon" />
+            </li>
+            <li class="cmp-list-unordered__item">
+              <img src="logo-codepen.svg" class="inline-svg cmp-link-icon__icon" alt="icon" />
+            </li>
+          </ul>
         </div>
       </article>
 
@@ -243,17 +238,13 @@
               <span class="cmp-heading__main">Iframe</span>
             </h2>
           </header>
-          <div class="mod-article__body col-smartphone-12">
-            <section class="mod-section__base row">
-              <div class="cmp-iframe__base col-smartphone-12">
-                <iframe
-                  class="cmp-iframe__iframe"
-                  title="#3 - CSS-Animations - @keyframes - staggering"
-                  src="https://codepen.io/paulalexserban/embed/KKdZNKx?default-tab="
-                >
-                </iframe>
-              </div>
-            </section>
+          <div class="cmp-iframe__base col-smartphone-12">
+            <iframe
+              class="cmp-iframe__iframe"
+              title="#3 - CSS-Animations - @keyframes - staggering"
+              src="https://codepen.io/paulalexserban/embed/KKdZNKx?default-tab="
+            >
+            </iframe>
           </div>
         </div>
       </article>
@@ -265,82 +256,78 @@
               <span class="cmp-heading__main">Tables</span>
             </h2>
           </header>
-          <div class="mod-article__body col-smartphone-12">
-            <section class="mod-section__base row">
-              <table class="pat-table__base col-smartphone-12">
-                <thead class="pat-table__head">
-                  <tr class="pat-table__row">
-                    <th class="pat-table__header">First Name</th>
-                    <th class="pat-table__header">Last Name</th>
-                    <th class="pat-table__header">Job Title</th>
-                    <th class="pat-table__header">Opponent</th>
-                  </tr>
-                </thead>
-                <tbody class="pat-table__body">
-                  <tr class="pat-table__row">
-                    <td class="pat-table__data" data-column="First Name">Robin</td>
-                    <td class="pat-table__data" data-column="Last Name">Hood</td>
-                    <td class="pat-table__data" data-column="Job Title">Outlaw Archer</td>
-                    <td class="pat-table__data" data-column="Opponent">Sheriff of Nottingham</td>
-                  </tr>
-                  <tr class="pat-table__row">
-                    <td class="pat-table__data" data-column="First Name">Peter</td>
-                    <td class="pat-table__data" data-column="Last Name">Pan</td>
-                    <td class="pat-table__data" data-column="Job Title">Free-spirited Flying Boy</td>
-                    <td class="pat-table__data" data-column="Opponent">Captain Hook</td>
-                  </tr>
-                  <tr class="pat-table__row">
-                    <td class="pat-table__data" data-column="First Name">Shrek</td>
-                    <td class="pat-table__data" data-column="Last Name">-</td>
-                    <td class="pat-table__data" data-column="Job Title">Anti-social Territorial Ogre</td>
-                    <td class="pat-table__data" data-column="Opponent">Lord Farquaad</td>
-                  </tr>
-                  <tr class="pat-table__row">
-                    <td class="pat-table__data" data-column="First Name">Sherlock</td>
-                    <td class="pat-table__data" data-column="Last Name">Holmes</td>
-                    <td class="pat-table__data" data-column="Job Title">Consulting Detective</td>
-                    <td class="pat-table__data" data-column="Opponent">Professor James Moriarty</td>
-                  </tr>
-                </tbody>
-              </table>
+          <table class="pat-table__base col-smartphone-12">
+            <thead class="pat-table__head">
+              <tr class="pat-table__row">
+                <th class="pat-table__header">First Name</th>
+                <th class="pat-table__header">Last Name</th>
+                <th class="pat-table__header">Job Title</th>
+                <th class="pat-table__header">Opponent</th>
+              </tr>
+            </thead>
+            <tbody class="pat-table__body">
+              <tr class="pat-table__row">
+                <td class="pat-table__data" data-column="First Name">Robin</td>
+                <td class="pat-table__data" data-column="Last Name">Hood</td>
+                <td class="pat-table__data" data-column="Job Title">Outlaw Archer</td>
+                <td class="pat-table__data" data-column="Opponent">Sheriff of Nottingham</td>
+              </tr>
+              <tr class="pat-table__row">
+                <td class="pat-table__data" data-column="First Name">Peter</td>
+                <td class="pat-table__data" data-column="Last Name">Pan</td>
+                <td class="pat-table__data" data-column="Job Title">Free-spirited Flying Boy</td>
+                <td class="pat-table__data" data-column="Opponent">Captain Hook</td>
+              </tr>
+              <tr class="pat-table__row">
+                <td class="pat-table__data" data-column="First Name">Shrek</td>
+                <td class="pat-table__data" data-column="Last Name">-</td>
+                <td class="pat-table__data" data-column="Job Title">Anti-social Territorial Ogre</td>
+                <td class="pat-table__data" data-column="Opponent">Lord Farquaad</td>
+              </tr>
+              <tr class="pat-table__row">
+                <td class="pat-table__data" data-column="First Name">Sherlock</td>
+                <td class="pat-table__data" data-column="Last Name">Holmes</td>
+                <td class="pat-table__data" data-column="Job Title">Consulting Detective</td>
+                <td class="pat-table__data" data-column="Opponent">Professor James Moriarty</td>
+              </tr>
+            </tbody>
+          </table>
 
-              <table class="pat-table__base col-smartphone-12">
-                <thead class="pat-table__head">
-                  <tr class="pat-table__row">
-                    <th class="pat-table__header" colspan="2">Computer A</th>
-                    <th class="pat-table__header" colspan="2">Computer B</th>
-                  </tr>
-                </thead>
-                <tbody class="pat-table__body">
-                  <tr class="pat-table__row">
-                    <td class="pat-table__data" rowspan="2">Pros</td>
-                    <td class="pat-table__data">Spec 1</td>
-                    <td class="pat-table__data">Spec 2</td>
-                    <td class="pat-table__data" rowspan="2">Pros</td>
-                  </tr>
-                  <tr class="pat-table__row">
-                    <td class="pat-table__data">Spec 3</td>
-                    <td class="pat-table__data">Spec 4</td>
-                  </tr>
-                  <tr class="pat-table__row">
-                    <td class="pat-table__data" rowspan="2">Cons</td>
-                    <td class="pat-table__data">Spec 1</td>
-                    <td class="pat-table__data">Spec 2</td>
-                    <td class="pat-table__data" rowspan="2">Cons</td>
-                  </tr>
-                  <tr class="pat-table__row">
-                    <td class="pat-table__data">Spec 3</td>
-                    <td class="pat-table__data">Spec 4</td>
-                  </tr>
-                </tbody>
-                <tfoot class="pat-table__foot">
-                  <tr class="pat-table__row">
-                    <td class="pat-table__data" colspan="4">ErgoTechnics@2022</td>
-                  </tr>
-                </tfoot>
-              </table>
-            </section>
-          </div>
+          <table class="pat-table__base col-smartphone-12">
+            <thead class="pat-table__head">
+              <tr class="pat-table__row">
+                <th class="pat-table__header" colspan="2">Computer A</th>
+                <th class="pat-table__header" colspan="2">Computer B</th>
+              </tr>
+            </thead>
+            <tbody class="pat-table__body">
+              <tr class="pat-table__row">
+                <td class="pat-table__data" rowspan="2">Pros</td>
+                <td class="pat-table__data">Spec 1</td>
+                <td class="pat-table__data">Spec 2</td>
+                <td class="pat-table__data" rowspan="2">Pros</td>
+              </tr>
+              <tr class="pat-table__row">
+                <td class="pat-table__data">Spec 3</td>
+                <td class="pat-table__data">Spec 4</td>
+              </tr>
+              <tr class="pat-table__row">
+                <td class="pat-table__data" rowspan="2">Cons</td>
+                <td class="pat-table__data">Spec 1</td>
+                <td class="pat-table__data">Spec 2</td>
+                <td class="pat-table__data" rowspan="2">Cons</td>
+              </tr>
+              <tr class="pat-table__row">
+                <td class="pat-table__data">Spec 3</td>
+                <td class="pat-table__data">Spec 4</td>
+              </tr>
+            </tbody>
+            <tfoot class="pat-table__foot">
+              <tr class="pat-table__row">
+                <td class="pat-table__data" colspan="4">ErgoTechnics@2022</td>
+              </tr>
+            </tfoot>
+          </table>
         </div>
       </article>
 
@@ -351,170 +338,163 @@
               <span class="cmp-heading__main">Forms</span>
             </h2>
           </header>
-          <div class="mod-article__body col-smartphone-12">
-            <section class="mod-section__base row">
-              <form class="pat-form__base col-smartphone-12" action="index.html" method="post">
-                <fieldset class="pat-fieldset__base row no-gutter">
-                  <legend class="pat-fieldset__legend col-smartphone-12">Profile Information</legend>
+          <form class="pat-form__base col-smartphone-12" action="index.html" method="post">
+            <fieldset class="pat-fieldset__base row no-gutter">
+              <legend class="pat-fieldset__legend col-smartphone-12">Profile Information</legend>
 
-                  <label class="cmp-input__label col-smartphone-6" for="name"
-                    >Name:
-                    <input
-                      class="cmp-input__input"
-                      type="text"
-                      id="name"
-                      name="user_name"
-                      placeholder="Your name"
-                      required
-                    />
-                  </label>
+              <label class="cmp-input__label col-smartphone-6" for="name"
+                >Name:
+                <input
+                  class="cmp-input__input"
+                  type="text"
+                  id="name"
+                  name="user_name"
+                  placeholder="Your name"
+                  required
+                />
+              </label>
 
-                  <label class="cmp-input__label col-smartphone-6" for="email"
-                    >Email:
-                    <input
-                      class="cmp-input__input"
-                      type="email"
-                      id="email"
-                      name="user_email"
-                      placeholder="Your email"
-                      required
-                    />
-                  </label>
+              <label class="cmp-input__label col-smartphone-6" for="email"
+                >Email:
+                <input
+                  class="cmp-input__input"
+                  type="email"
+                  id="email"
+                  name="user_email"
+                  placeholder="Your email"
+                  required
+                />
+              </label>
 
-                  <label class="cmp-input__label col-smartphone-12" for="password"
-                    >Password:
-                    <input
-                      class="cmp-input__input"
-                      type="password"
-                      id="password"
-                      name="user_password"
-                      placeholder="Secret password"
-                      required
-                    />
-                  </label>
-                </fieldset>
+              <label class="cmp-input__label col-smartphone-12" for="password"
+                >Password:
+                <input
+                  class="cmp-input__input"
+                  type="password"
+                  id="password"
+                  name="user_password"
+                  placeholder="Secret password"
+                  required
+                />
+              </label>
+            </fieldset>
 
-                <fieldset class="pat-fieldset__base row no-gutter">
-                  <legend class="pat-fieldset__legend col-smartphone-12">Experience:</legend>
+            <fieldset class="pat-fieldset__base row no-gutter">
+              <legend class="pat-fieldset__legend col-smartphone-12">Experience:</legend>
 
-                  <label class="cmp-radio__label col-smartphone-12" for="beginner">
-                    <input
-                      class="cmp-radio__input"
-                      type="radio"
-                      id="beginner"
-                      value="beginner"
-                      name="user_experience"
-                    />Beginner</label
-                  >
+              <label class="cmp-radio__label col-smartphone-12" for="beginner">
+                <input
+                  class="cmp-radio__input"
+                  type="radio"
+                  id="beginner"
+                  value="beginner"
+                  name="user_experience"
+                />Beginner</label>
 
-                  <label class="cmp-radio__label col-smartphone-12" for="intermediate">
-                    <input
-                      class="cmp-radio__input"
-                      type="radio"
-                      id="intermediate"
-                      value="intermediate"
-                      name="user_experience"
-                    />Intermediate</label
-                  >
+              <label class="cmp-radio__label col-smartphone-12" for="intermediate">
+                <input
+                  class="cmp-radio__input"
+                  type="radio"
+                  id="intermediate"
+                  value="intermediate"
+                  name="user_experience"
+                />Intermediate</label
+              >
 
-                  <label class="cmp-radio__label col-smartphone-12" for="advanced">
-                    <input
-                      class="cmp-radio__input"
-                      type="radio"
-                      id="advanced"
-                      value="advanced"
-                      name="user_experience"
-                    />Advanced</label
-                  >
+              <label class="cmp-radio__label col-smartphone-12" for="advanced">
+                <input
+                  class="cmp-radio__input"
+                  type="radio"
+                  id="advanced"
+                  value="advanced"
+                  name="user_experience"
+                />Advanced</label>
 
-                  <label class="cmp-range__label col-smartphone-12" for="range"
-                    >Years of experience
-                    <input
-                      class="cmp-range__input"
-                      id="range"
-                      type="range"
-                      name="range"
-                      value="5"
-                      min="0"
-                      max="15"
-                      onmousemove="rangevalue.value=value"
-                    />
-                    <output id="rangevalue"></output>
-                  </label>
-                </fieldset>
+              <div class="cmp-range__base">
+                <label class="cmp-range__label col-smartphone-12" for="range"
+                >Years of experience
+                <input
+                  class="cmp-range__input"
+                  id="range"
+                  type="range"
+                  name="range"
+                  value="5"
+                  min="0"
+                  max="15"/>
+                </label>
+              </div>
+            </fieldset>
 
-                <fieldset class="pat-fieldset__base row no-gutter">
-                  <legend class="pat-fieldset__legend col-smartphone-12">Profile</legend>
+            <fieldset class="pat-fieldset__base row no-gutter">
+              <legend class="pat-fieldset__legend col-smartphone-12">Profile</legend>
 
-                  <label class="cmp-textarea__label col-smartphone-12" for="bio"
-                    >Biography:
-                    <textarea class="cmp-textarea__input" id="bio" name="user_bio" rows="4" cols="50">
+              <label class="cmp-textarea__label col-smartphone-12" for="bio"
+                >Biography:
+                <textarea class="cmp-textarea__input" id="bio" name="user_bio" rows="4" cols="50">
 Tell us more about you ;)</textarea
-                    >
-                  </label>
+                >
+              </label>
 
-                  <label class="cmp-select__label col-smartphone-6" for="job"
-                    >Job Role:
-                    <select class="cmp-select__input" id="job" name="user_job">
-                      <optgroup label="Web">
-                        <option value="frontend_developer">Front-End Developer</option>
-                        <option value="php_developer">PHP Developer</option>
-                        <option value="python_developer">Python Developer</option>
-                        <option value="rails_developer">Rails Developer</option>
-                        <option value="web_designer">Web Designer</option>
-                        <option value="wordpress_developer">Wordpress Developer</option>
-                      </optgroup>
-                      <optgroup label="Mobile">
-                        <option value="android_developer">Android Developer</option>
-                        <option value="ios_developer">IOS Developer</option>
-                        <option value="mobile_designer">Mobile Designer</option>
-                      </optgroup>
-                      <optgroup label="Business">
-                        <option value="business_owner">Business Owner</option>
-                        <option value="freelancer">Freelancer</option>
-                      </optgroup>
-                    </select>
-                  </label>
-                </fieldset>
-                <fieldset class="pat-fieldset__base row no-gutter">
-                  <legend class="pat-fieldset__legend col-smartphone-12">Interests:</legend>
+              <label class="cmp-select__label col-smartphone-6" for="job"
+                >Job Role:
+                <select class="cmp-select__input" id="job" name="user_job">
+                  <optgroup label="Web">
+                    <option value="frontend_developer">Front-End Developer</option>
+                    <option value="php_developer">PHP Developer</option>
+                    <option value="python_developer">Python Developer</option>
+                    <option value="rails_developer">Rails Developer</option>
+                    <option value="web_designer">Web Designer</option>
+                    <option value="wordpress_developer">Wordpress Developer</option>
+                  </optgroup>
+                  <optgroup label="Mobile">
+                    <option value="android_developer">Android Developer</option>
+                    <option value="ios_developer">IOS Developer</option>
+                    <option value="mobile_designer">Mobile Designer</option>
+                  </optgroup>
+                  <optgroup label="Business">
+                    <option value="business_owner">Business Owner</option>
+                    <option value="freelancer">Freelancer</option>
+                  </optgroup>
+                </select>
+              </label>
+            </fieldset>
+            <fieldset class="pat-fieldset__base row no-gutter">
+              <legend class="pat-fieldset__legend col-smartphone-12">Interests:</legend>
 
-                  <label class="pat-fieldset__label col-smartphone-12" for="development">
-                    <input
-                      class="cmp-checkbox__input"
-                      type="checkbox"
-                      id="development"
-                      value="interest_development"
-                      name="user_interest"
-                    />Development
-                  </label>
-                  <label class="pat-fieldset__label col-smartphone-12" for="design">
-                    <input
-                      class="cmp-checkbox__input"
-                      type="checkbox"
-                      id="design"
-                      value="interest_design"
-                      name="user_interest"
-                    />Design
-                  </label>
-                  <label class="pat-fieldset__label col-smartphone-12" for="business">
-                    <input
-                      class="cmp-checkbox__input"
-                      type="checkbox"
-                      id="business"
-                      value="interest_business"
-                      name="user_interest"
-                    />Business
-                  </label>
-                </fieldset>
+              <label class="pat-fieldset__label col-smartphone-12" for="development">
+                <input
+                  class="cmp-checkbox__input"
+                  type="checkbox"
+                  id="development"
+                  value="interest_development"
+                  name="user_interest"
+                />Development
+              </label>
+              <label class="pat-fieldset__label col-smartphone-12" for="design">
+                <input
+                  class="cmp-checkbox__input"
+                  type="checkbox"
+                  id="design"
+                  value="interest_design"
+                  name="user_interest"
+                />Design
+              </label>
+              <label class="pat-fieldset__label col-smartphone-12" for="business">
+                <input
+                  class="cmp-checkbox__input"
+                  type="checkbox"
+                  id="business"
+                  value="interest_business"
+                  name="user_interest"
+                />Business
+              </label>
+            </fieldset>
 
-                <div class="mod-form__buttons">
-                  <button class="cmp-button__base cmp-button__base--primary" type="submit">Sign Up</button>
-                  <button class="cmp-button__base cmp-button__base--warning" type="reset">Reset</button>
-                </div>
-              </form>
-            </section>
-          </div>
+            <div class="mod-form__buttons">
+              <button class="cmp-button__base cmp-button__base--primary" type="submit">Sign Up</button>
+              <button class="cmp-button__base cmp-button__base--warning" type="reset">Reset</button>
+            </div>
+          </form>
         </div>
       </article>
     </main>
@@ -542,37 +522,37 @@ Tell us more about you ;)</textarea
                   href="https://www.freecodecamp.org/learn/responsive-web-design/"
                   target="blank"
                 >
-                  <svg src="logo-freecodecamp-icon-vector-01.svg" class="inline-svg cmp-link-icon__icon"></svg>
+                  <img src="logo-freecodecamp-icon-vector-01.svg" class="inline-svg cmp-link-icon__icon" alt="icon" />
                   <span class="cmp-link-icon__tooltip">FreeCodeCamp.org</span>
                 </a>
               </li>
               <li class="cmp-list-unordered__item">
                 <a class="cmp-link-icon__base" rel="noopener" id="linkedin" href="#" target="blank">
-                  <svg src="logo-linkedin.svg" class="inline-svg cmp-link-icon__icon"></svg>
+                  <img src="logo-linkedin.svg" class="inline-svg cmp-link-icon__icon" alt="icon" />
                   <span class="cmp-link-icon__tooltip">LinkedIn</span>
                 </a>
               </li>
               <li class="cmp-list-unordered__item">
                 <a class="cmp-link-icon__base" rel="noopener" id="blog" href="#" target="blank">
-                  <svg src="logo-blogger.svg" class="inline-svg cmp-link-icon__icon"></svg>
+                  <img src="logo-blogger.svg" class="inline-svg cmp-link-icon__icon" alt="icon" />
                   <span class="cmp-link-icon__tooltip">Blog</span>
                 </a>
               </li>
               <li class="cmp-list-unordered__item">
                 <a class="cmp-link-icon__base" rel="noopener" id="github" href="#" target="blank">
-                  <svg src="logo-github.svg" class="inline-svg cmp-link-icon__icon"></svg>
+                  <img src="logo-github.svg" class="inline-svg cmp-link-icon__icon" alt="icon" />
                   <span class="cmp-link-icon__tooltip">Github</span>
                 </a>
               </li>
               <li class="cmp-list-unordered__item">
                 <a class="cmp-link-icon__base" rel="noopener" id="hackerrank" href="#" target="blank">
-                  <svg src="logo-hackerank.svg" class="inline-svg cmp-link-icon__icon"></svg>
+                  <img src="logo-hackerank.svg" class="inline-svg cmp-link-icon__icon" alt="icon" />
                   <span class="cmp-link-icon__tooltip">HackerRank</span>
                 </a>
               </li>
               <li class="cmp-list-unordered__item">
                 <a class="cmp-link-icon__base" rel="noopener" id="#" href="#" target="blank">
-                  <svg src="logo-codepen.svg" class="inline-svg cmp-link-icon__icon"></svg>
+                  <img src="logo-codepen.svg" class="inline-svg cmp-link-icon__icon" alt="icon" />
                   <span class="cmp-link-icon__tooltip">CodePen</span>
                 </a>
               </li>
